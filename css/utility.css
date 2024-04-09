@@ -1,0 +1,79 @@
+.flex {
+  display: flex;
+}
+
+.justy-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.border {
+  /* border:2px solid blue; */
+  margin: 3px;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.invert {
+  filter: invert(1);
+}
+
+.m-1 {
+  margin: 5px;
+}
+
+.rounded {
+  border-radius: 7px;
+}
+
+.p1 {
+  padding: 10px;
+}
+
+.bg-black {
+  background-color: black;
+  color: white;
+}
+
+.bg-grey {
+  background-color: rgb(40, 37, 37);
+  color: white;
+}
+
+.bg-34 {
+  background-color: rgb(19, 17, 17);
+}
+
+.fw-b {
+  font-weight: bold;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}

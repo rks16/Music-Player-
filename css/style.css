@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* body{
+    background-color: black;
+    color: white;
+} */
+
+.left {
+  width: 20vw;
+  padding: 2px;
+}
+
+.right {
+  width: 80vw;
+  padding: 2px;
+
+  position: relative;
+}
+
+.home ul li {
+  display: flex;
+  list-style: none;
+  width: 20px;
+  gap: 10px;
+  padding-top: 15px;
+  font-weight: bold;
+}
+
+.heading {
+  display: flex;
+  /* width: 30px; */
+  gap: 10px;
+  padding-top: 15px;
+  font-weight: bold;
+  align-items: center;
+  font-size: 10px;
+}
+
+.Lib {
+  min-height: 60vh;
+}
+
+.close {
+  text-align: right;
+  display: none;
+}
+
+.heading img {
+  width: 30px;
+}
+
+.footerlib {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 10px;
+}
+
+.footerlib a {
+  color: white;
+  text-decoration: none;
+}
+
+.headerr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: -1px 0px;
+}
+
+.nav {
+  display: flex;
+  gap: 5px;
+  margin: 2px 15px;
+}
+
+.nav button {
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 20px;
+
+  background-color: black;
+  /* border: 1px solid whitesmoke;  */
+}
+
+.ham {
+  height: 30px;
+  width: 30px;
+
+  display: none;
+}
+
+.btns {
+  margin: 8px 15px;
+  padding: 10px;
+}
+
+.btns button {
+  width: 90px;
+  margin: 3px;
+  padding: 15px;
+
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#sn {
+  background: transparent;
+  border: none;
+  color: grey;
+}
+
+#ln {
+  background-color: white;
+  border: none;
+}
+
+#sn:hover {
+  color: white;
+  transform: scale(1.01);
+}
+
+#ln:hover {
+  transform: scale(1.02);
+}
+
+.card {
+  height: 180px;
+  width: 110px;
+  background-color: #252525;
+  margin: 2px;
+  padding: 10px 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  transition-property: background-color 0.5s ease;
+}
+
+.card img {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+
+.card:hover {
+  background-color: #5c5c5c;
+}
+
+.MStitle {
+  /* padding:10px; */
+  margin: 10px 2px;
+  overflow: hidden;
+  font-size: small;
+  text-align: left;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+  gap: 15px;
+
+  max-height: 53vh;
+  overflow: scroll;
+
+  overflow-x: hidden;
+}
+
+.play-button:hover {
+  opacity: 1;
+}
+
+.play-button i {
+  color: black;
+  font-size: x-small;
+}
+
+.playbar {
+  position: absolute;
+  width: 96%;
+  height: 100px;
+  background-color: lightgreen;
+  padding: 10px;
+
+  bottom: 0;
+}
+
+.seekbar {
+  height: 4px;
+  width: 98%;
+  /* border: 2px solid red; */
+  background-color: black;
+  position: absolute;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.circle {
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+
+  bottom: 3px;
+  transition: left 0.5s ease;
+}
+
+.sngbtn {
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+}
+
+.sngbtn i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.songlist {
+  height: 300px;
+  overflow: auto;
+}
+
+.songlist ul {
+  margin: 10px 10px;
+}
+
+.songlist ul li {
+  margin: 3px;
+  padding: 3px;
+
+  display: flex;
+  gap: 3px;
+  align-items: center;
+
+  list-style: none;
+  width: 190px;
+  /* border: 2px solid blue; */
+  height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+.songlist ul li:hover {
+  animation: scroll-left 5s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.snginfo,
+.sngtime {
+  color: black;
+  height: 10px;
+  width: 98.5%;
+}
+
+/* Responsiveness and media query */
+
+@media (max-width: 1100px) {
+  .left {
+    border: 2px solid aqua;
+    position: absolute;
+    left: -100%;
+    transition: all 0.3s;
+    z-index: 1;
+    width: 230px;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .playbar {
+    width: 95%;
+  }
+
+  .ham {
+    display: block;
+  }
+
+  .close {
+    display: block;
+  }
+
+  .songlist ul li {
+    width: 170px;
+  }
+
+  .playbar {
+    height: 50px;
+  }
+
+  .sngtime,
+  .seekbar,
+  .btns,
+  .nav button {
+    display: none;
+  }
+
+  .cardContainer {
+    justify-content: center;
+  }
+
+  .right {
+    margin: 0;
+    height: 100vh;
+  }
+}
